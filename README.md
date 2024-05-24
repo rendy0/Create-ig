@@ -27,5 +27,5 @@ $ pip install fake_email
 $ git clone https://github.com/AtsunaID/CreateIG 
 $ cd CreateIG 
 $ ls 
-$ python run.py
+$ python create.py
 ``` 
