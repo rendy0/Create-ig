@@ -157,7 +157,7 @@ def Create(mail,name,respon,sign_up,dev,pas,day,bln,thn,Post,ua):
     print("[*] Username: %s\n[*] Password: %s\n[*] UserAgent: %s\n"%(usernam,pas,ua))
     open("cp.txt","a").write(usernam+"|"+pas+"\n")
     cp+=1
-  tunggu(10)
+  tunggu(60)
 
 def posting(tok,coki):
   global img
