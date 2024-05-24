@@ -13,7 +13,7 @@ def tunggu(t):
     t -= 1
     if t == 0: break 
     else: time.sleep(1)
-  print('\r' + ' ' * 50 + '\r', end="")  # Clear the countdown line after completion
+  print('\r' + ' ' * 50 + '\r', end="")   Clear the countdown line after completion
 user = open('ua.txt','r').read().splitlines()
 
 def clear():
@@ -86,13 +86,13 @@ def Code(mail,name,respon,dev,pas,day,bln,thn,Post,ua,ses):
     }
     ps = requests.post("https://www.instagram.com/api/v1/accounts/send_verify_email/",headers=Post,data=data).text 
     jsb = json.loads(ps)
-    #print("\n[*] Email: %s"%(mail))
-    #print("[*] sedang mengirim kode"); time.sleep(0.01)
+    print("\n[*] Email: %s"%(mail))
+    print("[*] sedang mengirim kode"); time.sleep(0.10)
     while True:
       mass=Email(ses).inbox()
       if mass:
         topic = mass['topic'].split()[0]
-        #print("[*] Kode: %s"%(topic))
+        print("[*] Kode: %s"%(topic))
         break
   except Exception as e:
     print(e)
@@ -150,14 +150,14 @@ def Create(mail,name,respon,sign_up,dev,pas,day,bln,thn,Post,ua):
       print("[*] CREATE AKUN SUKSES             ")
       print(f"\r[*] Username: {usernam}\n[*] Password: {pas}\n[*] UserAgent: {ua}\n[*] Cookies: {coki}")
       print("[+] Berhasil Upload Photo\n")
-      open("ok.txt","a").write(usernam+"|"+pas+"|"+coki+"\n")
+      open("/sdcard/Create/ok.txt","a").write(usernam+"|"+pas+"|"+coki+"\n")
     ok+=1
   else: 
     print("\r[*] Create Checkpoint             ")
     print("[*] Username: %s\n[*] Password: %s\n[*] UserAgent: %s\n"%(usernam,pas,ua))
-    open("cp.txt","a").write(usernam+"|"+pas+"\n")
+    open("/sdcard/Create/cp.txt","a").write(usernam+"|"+pas+"\n")
     cp+=1
-  tunggu(60)
+  tunggu(59)
 
 def posting(tok,coki):
   global img
@@ -188,6 +188,6 @@ def posting(tok,coki):
 
     r = requests.post('https://www.instagram.com/accounts/web_change_profile_picture/', files=files, data=values, headers=headers, cookies={'cookie':coki}).text
     return r
-    #  open('Create/ok.txt','a').write(usernam+'|'+pas+'|'+coki+"\n")
+      open('/sdcard/Create/ok.txt','a').write(usernam+'|'+pas+'|'+coki+"\n")
   except Exception as e:
     print(e)
