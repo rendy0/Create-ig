@@ -150,12 +150,12 @@ def Create(mail,name,respon,sign_up,dev,pas,day,bln,thn,Post,ua):
       print("[*] CREATE AKUN SUKSES             ")
       print(f"\r[*] Username: {usernam}\n[*] Password: {pas}\n[*] UserAgent: {ua}\n[*] Cookies: {coki}")
       print("[+] Berhasil Upload Photo\n")
-      open("/sdcard/Create/ok.txt","a").write(usernam+"|"+pas+"|"+coki+"\n")
+      open("ok.txt","a").write(usernam+"|"+pas+"|"+coki+"\n")
     ok+=1
   else: 
     print("\r[*] Create Checkpoint             ")
     print("[*] Username: %s\n[*] Password: %s\n[*] UserAgent: %s\n"%(usernam,pas,ua))
-    open("/sdcard/Create/cp.txt","a").write(usernam+"|"+pas+"\n")
+    open("cp.txt","a").write(usernam+"|"+pas+"\n")
     cp+=1
   tunggu(59)
 
