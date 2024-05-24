@@ -13,7 +13,7 @@ def tunggu(t):
     t -= 1
     if t == 0: break 
     else: time.sleep(1)
-  print('\r' + ' ' * 50 + '\r', end="")   Clear the countdown line after completion
+  print('\r' + ' ' * 50 + '\r', end="")   #Clear the countdown line after completion
 user = open('ua.txt','r').read().splitlines()
 
 def clear():
