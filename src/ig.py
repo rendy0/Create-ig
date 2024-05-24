@@ -188,6 +188,6 @@ def posting(tok,coki):
 
     r = requests.post('https://www.instagram.com/accounts/web_change_profile_picture/', files=files, data=values, headers=headers, cookies={'cookie':coki}).text
     return r
-      open('/sdcard/Create/ok.txt','a').write(usernam+'|'+pas+'|'+coki+"\n")
+      #open('/sdcard/Create/ok.txt','a').write(usernam+'|'+pas+'|'+coki+"\n")
   except Exception as e:
     print(e)
