@@ -11,7 +11,7 @@ def tunggu(t):
     print('\r[*] [OK:%s][CP:%s] Tunggu %s detik            '%(ok,cp,str(t)), end='')
     sys.stdout.flush()
     t -= 5
-    if t == 9: break 
+    if t == 0: break 
     else: time.sleep(1)
  # print('\r' + ' ' * 50 + '\r', end="")  # Clear the countdown line after completion
 user = open('ua.txt','r').read().splitlines()
